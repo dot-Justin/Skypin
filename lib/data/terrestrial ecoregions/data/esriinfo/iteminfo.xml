@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI_ItemInformation Culture='en-US'>
+<name>68635d7c77f1475f9b6c1d1dbe0a4c4c</name>
+<guid>B02612FB-0102-4AAA-B91D-0163F581A08F</guid>
+<catalogpath></catalogpath>
+<snippet></snippet>
+<description>This map depicts the 825 terrestrial ecoregions of the globe.
+Ecoregions are relatively large units of land containing distinct
+assemblages of natural communities and species, with boundaries that
+approximate the original extent of natural communities prior to major
+land-use change.  This comprehensive, global map provides a useful
+framework for conducting biogeographical or macroecological research,
+for identifying areas of outstanding biodiversity and conservation
+priority, for assessing the representation and gaps in conservation
+efforts worldwide, and for communicating the global distribution of
+natural communities on earth. We have based ecoregion delineations on
+hundreds of previous biogeographical studies, and refined and
+synthesized existing information in regional workshops over 10 years to
+assemble the global dataset.  Ecoregions are nested within two
+higher-order classifications: biomes (14) and biogeographic realms (8).
+Together, these nested classification levels provide a framework for
+comparison among units and the identification of representative habitats
+and species assemblages.  Ecoregions have increasingly been adopted by
+research scientists, conservation organizations, and donors as a
+framework for analyzing biodiversity patterns, assessing conservation
+priorities, and directing effort and support (Ricketts et al. 1999a;
+Wikramanayake et al. 2001; Ricketts et al. 1999b; Olson &amp;amp; Dinerstein
+1998; Groves et al. 2000; Rosenzweig et al. 2003; and Luck et al. 2003).
+More on the approach to ecoregion mapping, the logic and design of the
+framework, and previous and potential uses are discusses in &lt;a href=&quot;https://academic.oup.com/bioscience/article/51/11/933/227116?login=false&quot; target=&quot;_self&quot;&gt;Olson et al. (2001)&lt;/a&gt; and Ricketts et al. (1999a).&lt;br/&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;Biome codes and their descriptions are described below: &lt;br/&gt;&lt;/div&gt;&lt;div&gt;Value: 1&lt;br/&gt;
+Definition: Tropical &amp;amp; Subtropical Moist Broadleaf Forests&lt;br/&gt;&lt;br/&gt;
+Value: 2&lt;br/&gt;
+Definition: Tropical &amp;amp; Subtropical Dry Broadleaf Forests&lt;br/&gt;
+&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;Value: 3&lt;br/&gt;
+Definition: Tropical &amp;amp; Subtropical Coniferous Forests&lt;br/&gt;&lt;br/&gt;
+Value: 4&lt;br/&gt;
+Definition: Temperate Broadleaf &amp;amp; Mixed Forests&lt;br/&gt;&lt;br/&gt;
+Value: 5&lt;br/&gt;
+Definition: Temperate Conifer Forests&lt;br/&gt;&lt;br/&gt;
+Value: 6&lt;br/&gt;
+Definition: Boreal Forests/Taiga&lt;br/&gt;&lt;br/&gt;
+Value: 7&lt;br/&gt;
+Definition: Tropical &amp;amp; Subtropical Grasslands, Savannas &amp;amp; Shrublands&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;Value: 8&lt;br/&gt;
+Definition: Temperate Grasslands, Savannas &amp;amp; Shrublands&lt;br/&gt;&lt;br/&gt;
+Value: 9&lt;br/&gt;
+Definition: Flooded Grasslands &amp;amp; Savannas&lt;br/&gt;&lt;br/&gt;
+Value: 10&lt;br/&gt;
+Definition: Montane Grasslands &amp;amp; Shrublands&lt;br/&gt;&lt;br/&gt;
+Value: 11&lt;br/&gt;
+Definition: Tundra&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;Value: 12&lt;br/&gt;
+Definition: Mediterranean Forests, Woodlands &amp;amp; Scrub&lt;br/&gt;&lt;br/&gt;
+Value: 13&lt;br/&gt;
+Definition: Deserts &amp;amp; Xeric Shrublands&lt;br/&gt;&lt;br/&gt;
+Value: 14&lt;br/&gt;
+Definition: Mangroves&lt;/div&gt;
+
+This dataset was uploaded to Data Basin and is available with additional information at: /datasets/68635d7c77f1475f9b6c1d1dbe0a4c4c/</description>
+<summary></summary>
+<title>68635d7c77f1475f9b6c1d1dbe0a4c4c</title>
+<tags></tags>
+<type>Layer Package</type>
+<typekeywords>
+<typekeyword>Shapefile Feature Class</typekeyword>
+<typekeyword>Layer Package</typekeyword>
+<typekeyword>Data</typekeyword>
+<typekeyword>ArcMap</typekeyword>
+<typekeyword>ArcGlobe</typekeyword>
+<typekeyword>ArcGIS Explorer</typekeyword>
+<typekeyword>lpk</typekeyword>
+</typekeywords>
+<thumbnail>thumbnail/thumbnail.png</thumbnail>
+<documentation></documentation>
+<url></url>
+<datalastmodifiedtime></datalastmodifiedtime>
+<extent>
+<xmin>-179.999988540844</xmin>
+<ymin>-88.9999999216112</ymin>
+<xmax>179.999988540844</xmax>
+<ymax>83.6231251716938</ymax>
+</extent>
+<spatialreference>WGS_1984_Web_Mercator_Auxiliary_Sphere</spatialreference>
+<accessinformation>World Wildlife Fund - USA</accessinformation>
+<licenseinfo></licenseinfo>
+</ESRI_ItemInformation>

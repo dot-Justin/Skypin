@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation><citeinfo>
+				<origin>World Wildlife Fund - USA</origin>
+				<pubdate>2004</pubdate>
+				<title>Terrestrial Ecoregions of the World</title>
+				<edition>Version 2.0</edition>
+				<geoform>vector digital data</geoform>
+				<pubinfo>
+					<pubplace />
+					<publish />
+				</pubinfo>
+				<othercit>Olson, D.M., E. Dinerstein, E.D. Wikramanayake, N.D. Burgess, G.V.N.
+Powell, E.C. Underwood, J.A. D'Amico, I. Itoua, H.E. Strand, J.C.
+Morrison, C.J. Loucks, T.F. Allnutt, T.H. Ricketts, Y. Kura, J.F.
+Lamoreux, W.W. Wettengel, P. Hedao, and K.R. Kassem. Terrestrial
+Ecoregions of the World: A New Map of Life on Earth (PDF, 1.1M)
+BioScience 51:933-938.&lt;br /&gt;</othercit>
+				<onlink>\\WALRUS\C\wendy\Wendy Tier 1\WWF_Terrestrial_Ecoregions\wwf_terr_ecos.shp</onlink>
+			</citeinfo>
+		<citeinfo /><citeinfo /></citation>
+		<descript>
+			<abstract>This map depicts the 825 terrestrial ecoregions of the globe.
+Ecoregions are relatively large units of land containing distinct
+assemblages of natural communities and species, with boundaries that
+approximate the original extent of natural communities prior to major
+land-use change.  This comprehensive, global map provides a useful
+framework for conducting biogeographical or macroecological research,
+for identifying areas of outstanding biodiversity and conservation
+priority, for assessing the representation and gaps in conservation
+efforts worldwide, and for communicating the global distribution of
+natural communities on earth. We have based ecoregion delineations on
+hundreds of previous biogeographical studies, and refined and
+synthesized existing information in regional workshops over 10 years to
+assemble the global dataset.  Ecoregions are nested within two
+higher-order classifications: biomes (14) and biogeographic realms (8).
+Together, these nested classification levels provide a framework for
+comparison among units and the identification of representative habitats
+and species assemblages.  Ecoregions have increasingly been adopted by
+research scientists, conservation organizations, and donors as a
+framework for analyzing biodiversity patterns, assessing conservation
+priorities, and directing effort and support (Ricketts et al. 1999a;
+Wikramanayake et al. 2001; Ricketts et al. 1999b; Olson &amp;amp; Dinerstein
+1998; Groves et al. 2000; Rosenzweig et al. 2003; and Luck et al. 2003).
+More on the approach to ecoregion mapping, the logic and design of the
+framework, and previous and potential uses are discusses in Olson et al.
+(2001) and Ricketts et al. (1999a).&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;</abstract>
+			<purpose></purpose>
+			<supplinf></supplinf>
+		</descript>
+		<timeperd><timeinfo><sngdate></sngdate><current /></timeinfo>
+			<current>publication date</current><timeinfo /><timeinfo /></timeperd>
+		
+		<keywords>
+			
+		<theme><themekey>ecoregions</themekey><themekey>World Wildlife Fund</themekey><themekt>Data Basin tags</themekt></theme></keywords>
+		<accconst>None</accconst>
+		<useconst>&lt;a rel="license" style="float:right;" href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" /&gt;&lt;/a&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"  target="_blank"&gt;Creative Commons Attribution-Noncommercial 3.0 License&lt;/a&gt;.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp><cntorg>Conservation Science Program - World Wildlife Fund</cntorg><cntper>Nasser Olwero (nasser.olwero@wwfus.org)</cntper></cntorgp>
+				
+				
+				
+				
+			</cntinfo>
+		<cntinfo /><cntinfo /></ptcontac>
+		<datacred>Groves, C., L. Valutis, D. Vosick, B. Neely, K. Wheaton, J. Touval, and 
+B. Runnels. 2000. Designing a Geography of Hope: A practitioner's 
+handbook to ecoregional conservation planning. The Nature Conservancy, 
+Arlington, VA.&lt;br /&gt;&lt;br /&gt;Luck, G.W., T.H. Ricketts, G.C. Daily, M. Imhoff 
+(2003). Spatial conflict between people and biodiversity. Procedings of 
+the National Academy of Sciences - US. 101(1):182-186.&lt;br /&gt;&lt;br /&gt;Olson, 
+D.M., and E. Dinerstein. 1998. The Global 200: a representation approach
+ to conserving the Earth's most biologically valuable ecoregions. 
+Conservation Biology 12:502-515.&lt;br /&gt;&lt;br /&gt;Olson, D.M., E. Dinerstein, E.D.
+ Wikramanayake, N.D. Burgess, G.V.N. Powell, E.C. Underwood, J.A. 
+D'Amico, I. Itoua, H.E. Strand, J.C. Morrison, C.J. Loucks, T.F. 
+Allnutt, T.H. Ricketts, Y. Kura, J.F. Lamoreux, W.W. Wettengel, P. 
+Hedao, and K.R. Kassem. 2001.  Terrestrial ecoregions of the world: New 
+map of life on earth. Bioscience 51(11):933-938.&lt;br /&gt;&lt;br /&gt;Ricketts, T.H., 
+E. Dinerstein, D.M. Olson, C. Loucks. 1999.  Who's where in North 
+America? Patterns of species richness and the utility of indicator taxa 
+for conservation.  Bioscience 49(5):369-381.&lt;br /&gt;&lt;br /&gt;Ricketts, T.H., E. 
+Dinerstein, D.M. Olson, C.J. Loucks, W. Eichbaum, K. Kavanagh, P. Hedao,
+ P. Hurley, K.M. Carney, R. Abell, and S. Walters. 1999.  Ecoregions of 
+North America: A conservation assessment.  Island Press. Washington DC. 
+485 pp.&lt;br /&gt;&lt;br /&gt;Rosenzweig, M.L., W. Turner, J.G. Cox, and T.H. Ricketts.
+ 2003. Estimating diversity in unsampled habitats of a biogeographical 
+province. Conservation Biology 17(3):864-874.&lt;br /&gt;&lt;br /&gt;Wikramanayake, E., 
+E. Dinerstein, C. Loucks, D. Olson, J. Morrison, J. Lamoreux, M. 
+McKnight, and P. Hedao. 2001. Terrestrial ecoregions of the 
+Indo-Pacific: a Conservation assessment. Island Press, Washington, DC.</datacred>
+	<status><progress>Complete</progress><update>As Needed</update></status><spdom><bounding /><bounding /></spdom></idinfo>
+	<dataqual>
+		<attracc>
+		<attraccr></attraccr></attracc>
+		<lineage>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>\\sasquatch\data\ecoregions\version_2\WWF_terr_eco.mdb</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>H:\ecoregions\version_2\wwf_terr_ecos</srcused>
+			</procstep>
+		</lineage>
+	<complete></complete></dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm><sdtstype>G-polygon</sdtstype>
+				<ptvctcnt>14458</ptvctcnt></sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<geograph><latres>0</latres><longres>0</longres><geogunit>Decimal degreees</geogunit></geograph>
+			<geodetic>
+				<horizdn>D_WGS_1984</horizdn><ellips>WGS_1984</ellips><semiaxis>6378137.000000</semiaxis><denflat>298.257224</denflat>
+			</geodetic>
+		</horizsys>/n</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>wwf_terr_ecos</enttypl>/n<enttypd>WWF's Terrestrial Ecoregions of the World</enttypd>/n<enttypds>http://www.worldwildlife.org/ecoregions/attributes.htm</enttypds>
+			</enttyp><attr>
+				<attrlabl>OBJECTID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+			<attalias>OBJECTID</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>AREA</attrlabl>
+				<attrdef>Area of each individual polygon in square kilometers.  The attribute area_km2 is a sum of this field for each ecoregion as a whole.</attrdef>
+				<attrdefs />
+			<attalias>AREA</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>PERIMETER</attrlabl>
+				<attrdef></attrdef>
+				<attrdefs />
+			<attalias>PERIMETER</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>ECO_NAME</attrlabl>
+				<attrdef>Ecoregion Name</attrdef>
+				<attrdefs />
+			<attalias>ECO_NAME</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>REALM</attrlabl>
+				<attrdef>Biogeographical Realm</attrdef>
+				<attrdefs />
+				<attrdomv>
+					<edom><edomv /><edomvd /><edomvds /></edom>
+					<edom><edomv>AA</edomv><edomvd>Australasia</edomvd><edomvds /></edom>
+					<edom><edomv>AN</edomv><edomvd>Antarctic </edomvd><edomvds /></edom>
+					<edom><edomv>AT</edomv><edomvd>Afrotropics</edomvd><edomvds /></edom>
+					<edom><edomv>IM</edomv><edomvd>IndoMalay</edomvd><edomvds /></edom>
+					<edom><edomv>NA</edomv><edomvd>Nearctic</edomvd><edomvds /></edom>
+					<edom><edomv>NT</edomv><edomvd>Neotropics</edomvd><edomvds /></edom>
+					<edom><edomv>OC</edomv><edomvd>Oceania</edomvd><edomvds /></edom>
+					<edom><edomv>PA</edomv><edomvd>Palearctic</edomvd><edomvds /></edom>
+				</attrdomv>
+			<attalias>REALM</attalias></attr>
+			<attr>
+				<attrlabl>BIOME</attrlabl>
+				<attrdef>Biome</attrdef>
+				<attrdefs />
+				<attrdomv>
+					<edom><edomv>1</edomv><edomvd>Tropical &amp; Subtropical Moist Broadleaf Forests</edomvd><edomvds /></edom>
+					<edom><edomv>2</edomv><edomvd>Tropical &amp; Subtropical Dry Broadleaf Forests</edomvd><edomvds /></edom>
+					<edom><edomv>3</edomv><edomvd>Tropical &amp; Subtropical Coniferous Forests</edomvd><edomvds /></edom>
+					<edom><edomv>4</edomv><edomvd>Temperate Broadleaf &amp; Mixed Forests</edomvd><edomvds /></edom>
+					<edom><edomv>5</edomv><edomvd>Temperate Conifer Forests</edomvd><edomvds /></edom>
+					<edom><edomv>6</edomv><edomvd>Boreal Forests/Taiga</edomvd><edomvds /></edom>
+					<edom><edomv>7</edomv><edomvd>Tropical &amp; Subtropical Grasslands, Savannas &amp; Shrublands</edomvd><edomvds /></edom>
+					<edom><edomv>8</edomv><edomvd>Temperate Grasslands, Savannas &amp; Shrublands</edomvd><edomvds /></edom>
+					<edom><edomv>9</edomv><edomvd>Flooded Grasslands &amp; Savannas</edomvd><edomvds /></edom>
+					<edom><edomv>10</edomv><edomvd>Montane Grasslands &amp; Shrublands</edomvd><edomvds /></edom>
+					<edom><edomv>11</edomv><edomvd>Tundra</edomvd><edomvds /></edom>
+					<edom><edomv>12</edomv><edomvd>Mediterranean Forests, Woodlands &amp; Scrub</edomvd><edomvds /></edom>
+					<edom><edomv>13</edomv><edomvd>Deserts &amp; Xeric Shrublands </edomvd><edomvds /></edom>
+					<edom><edomv>14</edomv><edomvd>Mangroves</edomvd><edomvds /></edom>
+				</attrdomv>
+			<attalias>BIOME</attalias></attr>
+			<attr>
+				<attrlabl>ECO_NUM</attrlabl>
+				<attrdef>A unique number for each ecoregion within each biome nested within each realm.</attrdef>
+				<attrdefs />
+			<attalias>ECO_NUM</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>ECO_ID</attrlabl>
+				<attrdef>This number is created by combining REALM, BIOME, and ECO_NUM, thus creating a unique numeric ID for each ecoregion.</attrdef>
+				<attrdefs />
+			<attalias>ECO_ID</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>ECO_SYM</attrlabl>
+				<attrdef>Ecoregion Symbol - Used to display the map in ArcInfo</attrdef>
+				<attrdefs />
+			<attalias>ECO_SYM</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>GBL_STAT</attrlabl>
+				<attrdef>Global Status</attrdef>
+				<attrdefs>A 30-year prediction of future conservation status given current conservation status and trajectories.</attrdefs>
+				<attrdomv>
+					<edom><edomv>1</edomv><edomvd>CRITICAL OR ENDANGERED</edomvd><edomvds /></edom>
+					<edom><edomv>2</edomv><edomvd>VULNERABLE</edomvd><edomvds /></edom>
+					<edom><edomv>3</edomv><edomvd>RELATIVELY STABLE OR INTACT</edomvd><edomvds /></edom>
+				</attrdomv>
+			<attalias>GBL_STAT</attalias></attr>
+			<attr>
+				<attrlabl>G200_REGIO</attrlabl>
+				<attrdef>Global 200 Name</attrdef>
+				<attrdefs />
+			<attalias>G200_REGIO</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>G200_NUM</attrlabl>
+				<attrdef>Global 200 Number</attrdef>
+				<attrdefs />
+			<attalias>G200_NUM</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>G200_BIOME</attrlabl>
+				<attrdef>Global 200 Biome - The biome of the Global 200 region that the ecoregion is a component of. Occasionally a Global 200 region is made up of ecoregions of different biomes. In this case, for a particular ecoregion, the G200_BIOME may be different from the original biome. For a description of each Global 200 biome (1-14), see BIOME.</attrdef>
+				<attrdefs />
+			<attalias>G200_BIOME</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>G200_STAT</attrlabl>
+				<attrdef>Global 200 Conservation status</attrdef>
+				<attrdefs />
+				<attrdomv>
+					<edom><edomv>1</edomv><edomvd>CRITICAL OR ENDANGERED</edomvd><edomvds /></edom>
+					<edom><edomv>2</edomv><edomvd>VULNERABLE</edomvd><edomvds /></edom>
+					<edom><edomv>3</edomv><edomvd>RELATIVELY STABLE OR INTACT</edomvd><edomvds /></edom>
+				</attrdomv>
+			<attalias>G200_STAT</attalias></attr>
+			<attr>
+				<attrlabl>SHAPE_LENG</attrlabl>
+				<attrdef />
+				<attrdefs />
+			<attalias /><attrdomv /></attr>
+			<attr>
+				<attrlabl>SHAPE_AREA</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+			<attalias /><attrdomv /></attr>
+			<attr>
+				<attrlabl>AREA_KM2</attrlabl>
+				<attrdef>Area of the Ecoregion (km2)</attrdef>
+				<attrdefs />
+			<attalias /><attrdomv /></attr>
+			<attr>
+				<attrlabl>ECO_CODE</attrlabl>
+				<attrdef>This is an alphanumeric code that is similar to eco_ID but a little easier to interpret.  The first 2 characters (letters) are the realm the ecoregion is in.  The 2nd 2 characters are the biome and the last 2 characters are the ecoregion number.</attrdef>
+				<attrdefs />
+			<attalias /><attrdomv /></attr>
+			<attr>
+				<attrlabl>REALM_1</attrlabl>
+				<attrdef>Biogeographical Realm - LABEL</attrdef>
+				<attrdefs />
+			<attalias>G200_STAT_</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>BIOME_1</attrlabl>
+				<attrdef>Biome - LABEL</attrdef>
+				<attrdefs />
+			<attalias>BIOME_1</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>GBL_STAT_1</attrlabl>
+				<attrdef>Global Status - LABEL</attrdef>
+				<attrdefs>A 30-year prediction of future conservation status given current conservation status and trajectories.</attrdefs>
+			<attalias>REALM_1</attalias><attrdomv /></attr>
+			<attr>
+				<attrlabl>G200_STAT_1</attrlabl>
+				<attrdef>Global 200 Conservation status - LABEL</attrdef>
+				<attrdefs />
+			<attalias /><attrdomv /></attr>
+		<attr><attrlabl>FID</attrlabl><attalias>FID</attalias><attrdef /><attrdomv /></attr><attr><attrlabl>Shape</attrlabl><attalias>Shape</attalias><attrdef /><attrdomv /></attr><attr><attrlabl>Shape_Leng</attrlabl><attalias>Shape_Leng</attalias><attrdef></attrdef><attrdomv /></attr><attr><attrlabl>Shape_Area</attrlabl><attalias>Shape_Area</attalias><attrdef>Area of feature in internal units squared.</attrdef><attrdomv /></attr><attr><attrlabl>area_km2</attrlabl><attalias>area_km2</attalias><attrdef>Area of the Ecoregion (km2)</attrdef><attrdomv /></attr><attr><attrlabl>eco_code</attrlabl><attalias>eco_code</attalias><attrdef>This is an alphanumeric code that is similar to eco_ID but a little easier to interpret.  The first 2 characters (letters) are the realm the ecoregion is in.  The 2nd 2 characters are the biome and the last 2 characters are the ecoregion number.</attrdef><attrdomv /></attr><attr><attrlabl>G200_STAT_</attrlabl><attalias>GBL_STAT_1</attalias><attrdef></attrdef><attrdomv /></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtopt><onlinopt>
+						<computer><networka><networkr /></networka></computer>
+						<accinstr />
+					</onlinopt>
+				</digtopt>
+			</digform>
+		</stdorder>
+		<distrib>
+			<cntinfo>
+				<cntperp><cntper /><cntorg /></cntperp>
+				<cntpos />
+			</cntinfo>
+		</distrib>
+		<distliab />
+	</distinfo>
+	<metainfo>
+		<metd>20100615</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp><cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg><cntper>REQUIRED: The person responsible for the metadata information.</cntper></cntorgp>
+				<cntpos />
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<city>REQUIRED: The city of the address.</city>
+					<state>REQUIRED: The state or province of the address.</state>
+					<postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+					<country />
+				</cntaddr>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Esri><CreaDate>20101027</CreaDate><CreaTime>17522300</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\WALRUS\D\DATAPART1\uploaded_2010\uploaded_Wendy\Dominique\TerrestrialEcoregions\commondata\data0\wwf_terr_ecos</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="D:\DATAPART1\Wendy_Tier_1\WWF_Terrestrial_Ecoregions\wwf_terr_ecos" dest="\\WALRUS\D\DATAPART1\uploaded_2010\uploaded_Wendy\Dominique\TerrestrialEcoregions\commondata\data0\wwf_terr_ecos" date="20101027" time="09505000" /></copyHistory><lineage><Process ToolSource="C:\Program Files (x86)\ArcGIS\Server10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20101027" Time="175224">Project D:\arcgisserver\services\im\68635d7c77f1475f9b6c1d1dbe0a4c4c\commondata\data0\wwf_terr_ecos.shp D:\arcgisserver\services\im\68635d7c77f1475f9b6c1d1dbe0a4c4c\commondata\data0\p_wwf_terr_ecos.shp PROJCS['WGS_1984_Web_Mercator_Auxiliary_Sphere',GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Mercator_Auxiliary_Sphere'],PARAMETER['False_Easting',0.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',0.0],PARAMETER['Standard_Parallel_1',0.0],PARAMETER['Auxiliary_Sphere_Type',0.0],UNIT['Meter',1.0]] # GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]</Process></lineage></DataProperties></Esri></metadata>

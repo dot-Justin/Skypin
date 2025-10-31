@@ -1,0 +1,218 @@
+
+# Terrestrial Ecoregions of the World
+
+
+## URL
+https://databasin.org/datasets/68635d7c77f1475f9b6c1d1dbe0a4c4c/
+
+
+## Dataset Type
+ArcGIS
+
+
+## Credits
+World Wildlife Fund - USA
+
+
+## Uploaded By
+[Conservation Biology Institute](https://databasin.org/people/consbio/)
+
+
+## Description
+This map depicts the 825 terrestrial ecoregions of the globe.
+Ecoregions are relatively large units of land containing distinct
+assemblages of natural communities and species, with boundaries that
+approximate the original extent of natural communities prior to major
+land-use change. This comprehensive, global map provides a useful
+framework for conducting biogeographical or macroecological research,
+for identifying areas of outstanding biodiversity and conservation
+priority, for assessing the representation and gaps in conservation
+efforts worldwide, and for communicating the global distribution of
+natural communities on earth. We have based ecoregion delineations on
+hundreds of previous biogeographical studies, and refined and
+synthesized existing information in regional workshops over 10 years to
+assemble the global dataset. Ecoregions are nested within two
+higher-order classifications: biomes (14) and biogeographic realms (8).
+Together, these nested classification levels provide a framework for
+comparison among units and the identification of representative habitats
+and species assemblages. Ecoregions have increasingly been adopted by
+research scientists, conservation organizations, and donors as a
+framework for analyzing biodiversity patterns, assessing conservation
+priorities, and directing effort and support (Ricketts et al. 1999a;
+Wikramanayake et al. 2001; Ricketts et al. 1999b; Olson &amp; Dinerstein
+1998; Groves et al. 2000; Rosenzweig et al. 2003; and Luck et al. 2003).
+More on the approach to ecoregion mapping, the logic and design of the
+framework, and previous and potential uses are discusses in
+[Olson et al. (2001)](https://academic.oup.com/bioscience/article/51/11/933/227116?login=false)
+and Ricketts et al. (1999a).
+  
+  
+
+ Biome codes and their descriptions are described below:
+   
+
+ Value: 1
+   
+
+ Definition: Tropical &amp; Subtropical Moist Broadleaf Forests
+   
+
+  
+
+ Value: 2
+   
+
+ Definition: Tropical &amp; Subtropical Dry Broadleaf Forests
+   
+
+  
+
+ Value: 3
+   
+
+ Definition: Tropical &amp; Subtropical Coniferous Forests
+   
+
+  
+
+ Value: 4
+   
+
+ Definition: Temperate Broadleaf &amp; Mixed Forests
+   
+
+  
+
+ Value: 5
+   
+
+ Definition: Temperate Conifer Forests
+   
+
+  
+
+ Value: 6
+   
+
+ Definition: Boreal Forests/Taiga
+   
+
+  
+
+ Value: 7
+   
+
+ Definition: Tropical &amp; Subtropical Grasslands, Savannas &amp; Shrublands
+   
+
+  
+
+ Value: 8
+   
+
+ Definition: Temperate Grasslands, Savannas &amp; Shrublands
+   
+
+  
+
+ Value: 9
+   
+
+ Definition: Flooded Grasslands &amp; Savannas
+   
+
+  
+
+ Value: 10
+   
+
+ Definition: Montane Grasslands &amp; Shrublands
+   
+
+  
+
+ Value: 11
+   
+
+ Definition: Tundra
+
+
+  
+
+ Value: 12
+   
+
+ Definition: Mediterranean Forests, Woodlands &amp; Scrub
+   
+
+  
+
+ Value: 13
+   
+
+ Definition: Deserts &amp; Xeric Shrublands
+   
+
+  
+
+ Value: 14
+   
+
+ Definition: Mangroves
+
+
+## Use Constraints
+This work is licensed under a  Creative Commons Attribution-NonCommercial 3.0 License .
+
+
+### Original Metadata
+metadata/metadata1_original.xml
+
+
+### Data Basin Metadata
+metadata/metadata1.xml
+
+
+### Data Files
+data/commondata/data0/wwf_terr_ecos.dbf
+data/commondata/data0/wwf_terr_ecos.prj
+data/commondata/data0/wwf_terr_ecos.sbn
+data/commondata/data0/wwf_terr_ecos.sbx
+data/commondata/data0/wwf_terr_ecos.shp
+data/commondata/data0/wwf_terr_ecos.shp.xml
+data/commondata/data0/wwf_terr_ecos.shx
+data/esriinfo/item.pkinfo
+data/esriinfo/iteminfo.xml
+data/esriinfo/thumbnail/thumbnail.png
+data/v10/0000Terrestrial Ecoregions of the World.lyr
+data/v101/0000Terrestrial Ecoregions of the World.lyr
+
+
+
+### Attribute Data
+
+AREA    AREA    Area of each individual polygon in square kilometers.  The attribute area_km2 is a sum of this field for each ecoregion as a whole.    
+area_km2    area_km2    Area of the Ecoregion (km2)    
+BIOME    BIOME    Biome    
+BIOME_1    BIOME_1    Biome - LABEL    
+eco_code    eco_code    This is an alphanumeric code that is similar to eco_ID but a little easier to interpret.  The first 2 characters (letters) are the realm the ecoregion is in.  The 2nd 2 characters are the biome and the last 2 characters are the ecoregion number.    
+ECO_ID    ECO_ID    This number is created by combining REALM, BIOME, and ECO_NUM, thus creating a unique numeric ID for each ecoregion.    
+ECO_NAME    ECO_NAME    Ecoregion Name    
+ECO_NUM    ECO_NUM    A unique number for each ecoregion within each biome nested within each realm.    
+ECO_SYM    ECO_SYM    Ecoregion Symbol - Used to display the map in ArcInfo    
+FID    FID    None    
+G200_BIOME    G200_BIOME    Global 200 Biome - The biome of the Global 200 region that the ecoregion is a component of. Occasionally a Global 200 region is made up of ecoregions of different biomes. In this case, for a particular ecoregion, the G200_BIOME may be different from the original biome. For a description of each Global 200 biome (1-14), see BIOME.    
+G200_NUM    G200_NUM    Global 200 Number    
+G200_REGIO    G200_REGIO    Global 200 Name    
+G200_STAT    G200_STAT    Global 200 Conservation status    
+REALM_1    G200_STAT_    Biogeographical Realm - LABEL    
+GBL_STAT    GBL_STAT    Global Status    
+G200_STAT_    GBL_STAT_1        
+OBJECTID    OBJECTID    Internal feature number.    
+PERIMETER    PERIMETER        
+REALM    REALM    Biogeographical Realm    
+GBL_STAT_1    REALM_1    Global Status - LABEL    
+Shape    Shape    None    
+Shape_Area    Shape_Area    Area of feature in internal units squared.    
+Shape_Leng    Shape_Leng        
+
