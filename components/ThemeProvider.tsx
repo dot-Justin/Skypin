@@ -13,44 +13,40 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  // Initialize from the HTML element's class (set by blocking script)
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark") ? "dark" : "light";
+    }
+    return "dark"; // fallback for SSR
+  });
   const [mounted, setMounted] = useState(false);
 
-  // Initialize theme from cookie or default to dark
+  // Mark as mounted and sync with cookie if needed
   useEffect(() => {
     const savedTheme = Cookies.get("skypin-theme") as Theme | undefined;
-    if (savedTheme === "light" || savedTheme === "dark") {
-      setTheme(savedTheme);
-    } else {
-      // Default to dark mode
-      setTheme("dark");
+
+    // If no cookie exists, set default to dark
+    if (!savedTheme) {
       Cookies.set("skypin-theme", "dark", { expires: 365 });
     }
+
     setMounted(true);
   }, []);
-
-  // Apply theme to document
-  useEffect(() => {
-    if (mounted) {
-      const root = document.documentElement;
-      if (theme === "dark") {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
-      }
-    }
-  }, [theme, mounted]);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     Cookies.set("skypin-theme", newTheme, { expires: 365 });
-  };
 
-  // Prevent flash of unstyled content
-  if (!mounted) {
-    return null;
-  }
+    // Apply theme class to document
+    const root = document.documentElement;
+    if (newTheme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

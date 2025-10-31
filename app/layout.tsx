@@ -77,8 +77,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${gambarino.variable} ${articulat.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getCookie(name) {
+                  const value = \`; \${document.cookie}\`;
+                  const parts = value.split(\`; \${name}=\`);
+                  if (parts.length === 2) return parts.pop().split(';').shift();
+                }
+
+                const theme = getCookie('skypin-theme');
+                // Default to dark mode if no cookie exists
+                if (theme === 'dark' || !theme) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={`${gambarino.variable} ${articulat.variable} antialiased`} suppressHydrationWarning>
         <ThemeProvider>
           <ThemeToggle />
           {children}
