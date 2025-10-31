@@ -102,6 +102,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${gambarino.variable} ${articulat.variable} antialiased`} suppressHydrationWarning>
+        <div id="grain" />
         <ThemeProvider>
           <ThemeToggle />
           {children}

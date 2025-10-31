@@ -86,6 +86,21 @@ async function loadKoppenRaster() {
   };
 }
 
+async function loadLandPolygons() {
+  console.log("Loading land polygons...");
+  const source = await shapefile.open("lib/data/land/ne_10m_land.shp");
+  const features: Feature[] = [];
+
+  let result = await source.read();
+  while (!result.done) {
+    features.push(result.value);
+    result = await source.read();
+  }
+
+  console.log(`Loaded ${features.length} land polygons`);
+  return turf.featureCollection(features);
+}
+
 async function loadCoastlines() {
   console.log("Loading coastlines...");
   const source = await shapefile.open("lib/data/coastline/ne_10m_coastline.shp");
@@ -99,14 +114,37 @@ async function loadCoastlines() {
 
   console.log(`Loaded ${features.length} coastline segments`);
 
-  // Create a single buffered polygon (50km inland buffer)
-  // This may take a few minutes but is done once
+  // Create a single buffered polygon (50km buffer around coastlines)
   console.log("Creating 50km coastal buffer zone (this may take a few minutes)...");
   const allCoastlines = turf.featureCollection(features);
   const buffered = turf.buffer(allCoastlines, COASTAL_BUFFER_KM, { units: "kilometers" });
   console.log("✅ Coastal buffer created!");
 
   return buffered;
+}
+
+async function createBeachZones() {
+  const landPolygons = await loadLandPolygons();
+  const coastalBuffer = await loadCoastlines();
+
+  console.log("Creating beach zones (intersecting buffer with each land polygon)...");
+
+  const beachZones: any[] = [];
+
+  for (let i = 0; i < landPolygons.features.length; i++) {
+    console.log(`  Processing land polygon ${i + 1}/${landPolygons.features.length}...`);
+    try {
+      const intersection = turf.intersect(coastalBuffer, landPolygons.features[i] as any);
+      if (intersection) {
+        beachZones.push(intersection);
+      }
+    } catch (err) {
+      console.log(`    Warning: Failed to intersect polygon ${i + 1}, skipping`);
+    }
+  }
+
+  console.log(`✅ Created ${beachZones.length} beach zones!`);
+  return beachZones;
 }
 
 function sampleKoppenValue(
@@ -130,12 +168,17 @@ function sampleKoppenValue(
   return value || 0; // 0 = no data/ocean
 }
 
-function isInCoastalZone(
+function isInBeachZones(
   point: Feature<Point>,
-  coastalBuffer: any
+  beachZones: any[]
 ): boolean {
   try {
-    return turf.booleanPointInPolygon(point, coastalBuffer);
+    for (const zone of beachZones) {
+      if (turf.booleanPointInPolygon(point, zone)) {
+        return true;
+      }
+    }
+    return false;
   } catch (err) {
     return false;
   }
@@ -148,7 +191,7 @@ async function buildBiomeGrid(): Promise<BiomeGrid> {
   console.log(`Grid resolution: ${GRID_RESOLUTION}° (~${Math.round(GRID_RESOLUTION * 111)}km)`);
 
   const raster = await loadKoppenRaster();
-  const coastalBuffer = await loadCoastlines();
+  const beachZones = await createBeachZones();
 
   const grid: BiomeGrid = {};
   let totalPoints = 0;
@@ -174,10 +217,10 @@ async function buildBiomeGrid(): Promise<BiomeGrid> {
       // Map to biome
       let biome = KOPPEN_TO_BIOME[koppenValue] || "field";
 
-      // If land (not ocean), check if in coastal buffer zone
+      // If land (not ocean), check if in beach zones (50km inland from coast)
       if (biome !== "ocean") {
         const point = turf.point([lon, lat]);
-        if (isInCoastalZone(point, coastalBuffer)) {
+        if (isInBeachZones(point, beachZones)) {
           biome = "beach";
         }
       }
