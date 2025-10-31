@@ -7,40 +7,41 @@
     @apply text-text-primary dark:text-dark-text-primary font-sans transition-colors;
     position: relative;
     overflow-x: hidden;
+    background-color: #f5fcfd;
+  }
+
+  .dark body {
+    background-color: #050e13;
   }
 
   /* Background image layer */
   body::before {
-    content: '';
+    content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: -3;
-    background-image: url('/images/field/field-day-1.jpg');
+    pointer-events: none;
+    background-image: url("/images/field/field-day-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    opacity: 1;
   }
 
-  /* Gradient overlay (darker at bottom) */
+  /* Gradient overlay */
   body::after {
-    content: '';
+    content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: -2;
+    pointer-events: none;
     background: linear-gradient(
       to bottom,
-      rgba(245, 252, 253, 0.5) 0%,
-      rgba(245, 252, 253, 0.75) 50%,
-      rgba(245, 252, 253, 0.9) 100%
+      rgba(245, 252, 253, 0.25) 0%,
+      rgba(245, 252, 253, 0.45) 50%,
+      rgba(245, 252, 253, 0.5) 100%
     );
-    pointer-events: none;
   }
 
   /* Dark mode gradient overlay */
@@ -53,37 +54,23 @@
     );
   }
 
-  /* Film grain effect */
-  @keyframes grain {
-    0%, 100% { transform: translate(0, 0); }
-    10% { transform: translate(-5%, -10%); }
-    20% { transform: translate(-15%, 5%); }
-    30% { transform: translate(7%, -25%); }
-    40% { transform: translate(-5%, 25%); }
-    50% { transform: translate(-15%, 10%); }
-    60% { transform: translate(15%, 0%); }
-    70% { transform: translate(0%, 15%); }
-    80% { transform: translate(3%, 35%); }
-    90% { transform: translate(-10%, 10%); }
-  }
-
-  /* Film grain layer */
-  body > #grain {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.55;
-    animation: grain 8s steps(10) infinite;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 200px 200px;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+}
+
+canvas[data-film-grain] {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+  opacity: 0.25;
+}
+
+.dark canvas[data-film-grain] {
+  mix-blend-mode: screen;
+  opacity: 0.5;
 }

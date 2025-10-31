@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
+import FilmGrain from "@/components/FilmGrain";
 
 const gambarino = localFont({
   src: "../public/fonts/Gambarino-Regular.woff2",
@@ -102,7 +103,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${gambarino.variable} ${articulat.variable} antialiased`} suppressHydrationWarning>
-        <div id="grain" />
+        <FilmGrain />
         <ThemeProvider>
           <ThemeToggle />
           {children}
