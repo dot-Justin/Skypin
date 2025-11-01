@@ -14,51 +14,14 @@
     background-color: #050e13;
   }
 
-  /* Background image layer */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -3;
-    pointer-events: none;
-    background-image: url("/images/field/field-day-1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity: 1;
-  }
-
-  /* Gradient overlay */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    pointer-events: none;
-    background: linear-gradient(
-      to bottom,
-      rgba(245, 252, 253, 0.25) 0%,
-      rgba(245, 252, 253, 0.45) 50%,
-      rgba(245, 252, 253, 0.5) 100%
-    );
-  }
-
-  /* Dark mode gradient overlay */
-  .dark body::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(7, 25, 29, 0.5) 0%,
-      rgba(7, 25, 29, 0.75) 50%,
-      rgba(7, 25, 29, 0.9) 100%
-    );
-  }
+  /* Background image and gradient overlay are now handled by BackgroundManager component */
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
 }
 
+/* Film grain canvas styling */
 canvas[data-film-grain] {
   position: fixed;
   inset: 0;

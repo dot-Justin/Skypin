@@ -5,6 +5,7 @@ import type {
   OpenMeteoForecast,
 } from "@/types/weather";
 import { getWeatherDescription } from "@/lib/wmoCode";
+import { getBiomeWithCity } from "@/lib/biomeDetector";
 
 // Convert Celsius to Fahrenheit
 function celsiusToFahrenheit(celsius: number): number {
@@ -50,7 +51,14 @@ export async function GET(request: NextRequest) {
 
     const location = geocodingData.results[0];
 
-    // Step 2: Fetch weather data for the coordinates
+    // Step 2: Detect biome for the location
+    const biome = getBiomeWithCity(
+      location.latitude,
+      location.longitude,
+      location.feature_code
+    );
+
+    // Step 3: Fetch weather data for the coordinates
     const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m&temperature_unit=celsius&wind_speed_unit=kmh&timezone=auto`;
 
     const weatherResponse = await fetch(weatherUrl);
@@ -64,7 +72,7 @@ export async function GET(request: NextRequest) {
 
     const weatherData: OpenMeteoForecast = await weatherResponse.json();
 
-    // Step 3: Transform to our unified WeatherData format
+    // Step 4: Transform to our unified WeatherData format
     const transformedData: WeatherData = {
       location: {
         name: location.name,
@@ -85,6 +93,13 @@ export async function GET(request: NextRequest) {
         humidity: weatherData.current.relative_humidity_2m,
         feelslike_c: Math.round(weatherData.current.apparent_temperature),
         feelslike_f: Math.round(celsiusToFahrenheit(weatherData.current.apparent_temperature)),
+      },
+      biome: {
+        type: biome,
+        coordinates: {
+          lat: location.latitude,
+          lon: location.longitude,
+        },
       },
     };
 

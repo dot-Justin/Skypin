@@ -69,7 +69,7 @@ const articulat = localFont({
 
 export const metadata: Metadata = {
   title: "Skypin",
-  description: "Weather for your mood",
+  description: "Listen anywhere",
 };
 
 export default function RootLayout({

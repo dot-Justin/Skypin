@@ -1,3 +1,5 @@
+import { BiomeType } from "../lib/biomeDetector";
+
 // Open-Meteo Geocoding API Response
 export interface GeocodingResult {
   id: number;
@@ -10,6 +12,7 @@ export interface GeocodingResult {
   admin1?: string;
   admin2?: string;
   country_code: string;
+  feature_code?: string;
 }
 
 export interface GeocodingResponse {
@@ -63,6 +66,13 @@ export interface WeatherData {
     humidity: number;
     feelslike_f: number;
     feelslike_c: number;
+  };
+  biome: {
+    type: BiomeType;
+    coordinates: {
+      lat: number;
+      lon: number;
+    };
   };
 }
 

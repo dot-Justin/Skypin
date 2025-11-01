@@ -3,13 +3,26 @@
 import { useState } from "react";
 import SearchBar from "@/components/SearchBar";
 import WeatherDisplay from "@/components/WeatherDisplay";
+import BackgroundManager from "@/components/BackgroundManager";
 import { getWeather } from "@/lib/weather";
 import type { WeatherData } from "@/types/weather";
+import { getTimeOfDay, getBiomeImagePath } from "@/lib/biomeUtils";
 
 export default function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Calculate background image based on biome, time of day, and location coordinates
+  // Location coordinates ensure deterministic image selection - same location = same image
+  const backgroundImage = weatherData
+    ? getBiomeImagePath(
+        weatherData.biome.type,
+        getTimeOfDay(weatherData.location.localtime),
+        weatherData.biome.coordinates.lat,
+        weatherData.biome.coordinates.lon
+      )
+    : "/images/field/field-day-1.jpg"; // Default fallback
 
   const handleSearch = async (query: string) => {
     setIsLoading(true);
@@ -27,12 +40,15 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-8">
-      <div className="w-full max-w-4xl space-y-12">
+    <>
+      <BackgroundManager backgroundImage={backgroundImage} />
+
+      <main className="min-h-screen flex flex-col items-center justify-center p-8">
+        <div className="w-full max-w-4xl space-y-12">
         {/* App Header */}
         <div className="text-center">
           <h1 className="text-6xl md:text-7xl font-serif mb-4">Skypin</h1>
-          <p className="text-text-secondary dark:text-dark-text-secondary text-lg">Weather for your mood</p>
+          <p className="text-text-secondary dark:text-dark-text-secondary text-lg">Listen anywhere.</p>
         </div>
 
         {/* Search Bar */}
@@ -71,7 +87,8 @@ export default function Home() {
             <p>Enter a location to see the current weather</p>
           </div>
         )}
-      </div>
-    </main>
+        </div>
+      </main>
+    </>
   );
 }

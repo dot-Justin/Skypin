@@ -1,13 +1,14 @@
 "use client";
 
 import type { WeatherData } from "@/types/weather";
+import { formatBiomeForDisplay } from "@/lib/biomeUtils";
 
 interface WeatherDisplayProps {
   data: WeatherData;
 }
 
 export default function WeatherDisplay({ data }: WeatherDisplayProps) {
-  const { location, current } = data;
+  const { location, current, biome } = data;
 
   // Format the local time
   const localTime = new Date(location.localtime).toLocaleTimeString("en-US", {
@@ -25,7 +26,7 @@ export default function WeatherDisplay({ data }: WeatherDisplayProps) {
             {location.name}
           </h1>
           <p className="text-text-secondary dark:text-dark-text-secondary text-lg">
-            {location.region && `${location.region}, `}{location.country}
+            {location.region && `${location.region}, `}{location.country} • {formatBiomeForDisplay(biome.type)}
           </p>
         </div>
 
