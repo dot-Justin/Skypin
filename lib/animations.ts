@@ -12,13 +12,13 @@
  * />
  */
 
-import { Variants } from "framer-motion";
+import { Variants, Easing } from "framer-motion";
 
 /**
  * Default easing curve for Skypin animations
  * Cubic bezier: ease-in-out with slight emphasis on deceleration
  */
-export const defaultEasing = [0.4, 0, 0.2, 1];
+export const defaultEasing: Easing = [0.4, 0, 0.2, 1];
 
 /**
  * Default transition duration (in seconds)
@@ -38,20 +38,24 @@ export const defaultDuration = 0.8;
  * <motion.div variants={blurIn} initial="hidden" animate="visible" exit="exit">
  *   Content fades in with deblur
  * </motion.div>
+ *
+ * Pass a delay via the `custom` prop to stagger elements:
+ * <motion.div variants={blurIn} custom={0.5} initial="hidden" animate="visible" />
  */
 export const blurIn: Variants = {
   hidden: {
     opacity: 0,
     filter: "blur(20px)",
   },
-  visible: {
+  visible: (delay: number = 0) => ({
     opacity: 1,
     filter: "blur(0px)",
     transition: {
       duration: defaultDuration,
       ease: defaultEasing,
+      delay,
     },
-  },
+  }),
   exit: {
     opacity: 0,
     filter: "blur(20px)",

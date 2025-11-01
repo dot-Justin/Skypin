@@ -1,4 +1,25 @@
-import { BiomeType } from "./biomeDetector";
+import type { BiomeType } from "./biomeDetector";
+import countsJson from "./data/biomeImageCounts.json";
+
+type TimeSlot = "day" | "evening" | "night";
+
+type BiomeImageCounts = Record<BiomeType, Record<TimeSlot, number>>;
+
+const BIOME_TYPES: BiomeType[] = ["ocean", "lake", "beach", "desert", "field", "forest", "city"];
+const EMPTY_COUNTS: Record<TimeSlot, number> = { day: 0, evening: 0, night: 0 };
+
+const normalizedCounts = BIOME_TYPES.reduce<BiomeImageCounts>((acc, biome) => {
+  const counts =
+    (countsJson as Record<string, Partial<Record<TimeSlot, number>>>)[biome] ?? EMPTY_COUNTS;
+
+  acc[biome] = {
+    day: counts.day ?? 0,
+    evening: counts.evening ?? 0,
+    night: counts.night ?? 0,
+  };
+
+  return acc;
+}, {} as BiomeImageCounts);
 
 /**
  * Image counts for each biome and time-of-day combination.
@@ -6,47 +27,13 @@ import { BiomeType } from "./biomeDetector";
  *
  * File naming pattern: /images/{biome}/{biome}-{timeOfDay}-{number}.jpg
  * Example: /images/forest/forest-evening-3.jpg
- *
- * Note: Ocean and lake biomes currently fall back to beach images.
- * When ocean/lake images are added, create directories:
- * - public/images/ocean/
- * - public/images/lake/
  */
-export const BIOME_IMAGE_COUNTS: Record<
-  Exclude<BiomeType, "ocean" | "lake">,
-  { day: number; evening: number; night: number }
-> = {
-  beach: {
-    day: 5,
-    evening: 7,
-    night: 3,
-  },
-  city: {
-    day: 5,
-    evening: 12,
-    night: 5,
-  },
-  desert: {
-    day: 8,
-    evening: 7,
-    night: 10,
-  },
-  field: {
-    day: 14,
-    evening: 16,
-    night: 0, // No night images available, will fallback to evening
-  },
-  forest: {
-    day: 7,
-    evening: 5,
-    night: 2,
-  },
-};
+export const BIOME_IMAGE_COUNTS = normalizedCounts;
 
 /**
  * Fallback mapping for biomes without dedicated images
  */
-export const BIOME_FALLBACKS: Partial<Record<BiomeType, Exclude<BiomeType, "ocean" | "lake">>> = {
+export const BIOME_FALLBACKS: Partial<Record<BiomeType, BiomeType>> = {
   ocean: "beach",
   lake: "beach",
 };

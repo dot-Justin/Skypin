@@ -33,12 +33,12 @@ const GRID_RESOLUTION = 0.5; // degrees (~111km at equator)
 // Conversion reference (1 grid cell = 1° ≈ 111 km at equator):
 const BIOME_BUFFERS: Record<BiomeType, number> = {
   ocean: 0,      // Ocean: 0 km (water-to-land boundaries remain sharp)
-  lake: 10,     // Lake/inland water: 111 km expansion (1 cell)
+  lake: 30,     // Lake/inland water: 111 km expansion (1 cell)
   beach: 10,    // Beach/coastal: 222 km expansion (2 cells)
-  desert: 10,   // Desert: 222 km expansion (2 cells)
+  desert: 50,   // Desert: 222 km expansion (2 cells)
   field: 0,      // Field: 0 km (baseline, acts as neutral filler)
   forest: 10,   // Forest: 222 km expansion (2 cells - large influence zone)
-  city: 10,     // City: 333 km expansion (3 cells - urban zones extend far)
+  city: 50,     // City: 333 km expansion (3 cells - urban zones extend far)
 };
 
 // Search radius for spatial index queries (degrees)

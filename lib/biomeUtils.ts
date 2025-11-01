@@ -66,18 +66,29 @@ export function getTimeOfDay(localtime: string): TimeOfDay {
   }
 }
 
+function hasImagesForBiome(biome: BiomeType): boolean {
+  const counts = BIOME_IMAGE_COUNTS[biome];
+  if (!counts) return false;
+  return counts.day > 0 || counts.evening > 0 || counts.night > 0;
+}
+
 /**
  * Gets the effective biome for image selection, handling fallbacks.
  *
  * @param biome - Original biome type from detector
  * @returns Biome type to use for image selection
  */
-function getEffectiveBiome(biome: BiomeType): Exclude<BiomeType, "ocean" | "lake"> {
-  // Check if this biome needs a fallback
-  if (biome === "ocean" || biome === "lake") {
-    return BIOME_FALLBACKS[biome] || "beach";
+function getEffectiveBiome(biome: BiomeType): BiomeType {
+  if (hasImagesForBiome(biome)) {
+    return biome;
   }
-  return biome as Exclude<BiomeType, "ocean" | "lake">;
+
+  const fallback = BIOME_FALLBACKS[biome];
+  if (fallback && hasImagesForBiome(fallback)) {
+    return fallback;
+  }
+
+  return "beach";
 }
 
 /**
@@ -88,7 +99,7 @@ function getEffectiveBiome(biome: BiomeType): Exclude<BiomeType, "ocean" | "lake
  * @returns Time of day to use for image selection
  */
 function getEffectiveTimeOfDay(
-  biome: Exclude<BiomeType, "ocean" | "lake">,
+  biome: BiomeType,
   timeOfDay: TimeOfDay
 ): TimeOfDay {
   const counts = BIOME_IMAGE_COUNTS[biome];

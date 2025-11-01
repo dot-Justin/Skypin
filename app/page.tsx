@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import SearchBar from "@/components/SearchBar";
 import WeatherDisplay from "@/components/WeatherDisplay";
 import BackgroundManager from "@/components/BackgroundManager";
 import { getWeather } from "@/lib/weather";
 import type { WeatherData } from "@/types/weather";
 import { getTimeOfDay, getBiomeImagePath } from "@/lib/biomeUtils";
+import { blurIn } from "@/lib/animations";
 
 export default function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
@@ -46,15 +48,26 @@ export default function Home() {
       <main className="min-h-screen flex flex-col items-center justify-center p-8">
         <div className="w-full max-w-4xl space-y-12">
         {/* App Header */}
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          variants={blurIn}
+          initial="hidden"
+          animate="visible"
+        >
           <h1 className="text-6xl md:text-7xl font-serif mb-4">Skypin</h1>
-          <p className="text-text-secondary dark:text-dark-text-secondary text-lg">Listen anywhere.</p>
-        </div>
+          <p className="text-text-secondary dark:text-dark-text-secondary text-lg">Hear anywhere.</p>
+        </motion.div>
 
         {/* Search Bar */}
-        <div className="flex justify-center">
+        <motion.div
+          className="flex justify-center"
+          variants={blurIn}
+          initial="hidden"
+          animate="visible"
+          custom={0.5}
+        >
           <SearchBar onSearch={handleSearch} isLoading={isLoading} />
-        </div>
+        </motion.div>
 
         {/* Loading State */}
         {isLoading && (
@@ -84,7 +97,7 @@ export default function Home() {
         {/* Empty State */}
         {!weatherData && !isLoading && !error && (
           <div className="text-center text-text-secondary dark:text-dark-text-secondary">
-            <p>Enter a location to see the current weather</p>
+            <p></p>
           </div>
         )}
         </div>

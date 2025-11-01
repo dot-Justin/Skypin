@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { backgroundCrossfade } from "@/lib/animations";
 
@@ -26,11 +26,13 @@ interface BackgroundManagerProps {
 export default function BackgroundManager({ backgroundImage }: BackgroundManagerProps) {
   const [displayedImage, setDisplayedImage] = useState(backgroundImage);
   const [previousImage, setPreviousImage] = useState<string | null>(null);
+  const isInitialMount = useRef(true);
 
   // Detect background image change
   if (backgroundImage !== displayedImage) {
     setPreviousImage(displayedImage);
     setDisplayedImage(backgroundImage);
+    isInitialMount.current = false; // Any change after mount means we should animate
   }
 
   return (
@@ -53,7 +55,7 @@ export default function BackgroundManager({ backgroundImage }: BackgroundManager
           />
         )}
 
-        {/* New image layer - enters with deblur+fade */}
+        {/* New image layer - enters with deblur+fade (skips animation on initial mount) */}
         <motion.div
           key={`new-${displayedImage}`}
           className="pointer-events-none fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -63,7 +65,7 @@ export default function BackgroundManager({ backgroundImage }: BackgroundManager
             zIndex: -3, // Above old image, below gradient
           }}
           variants={backgroundCrossfade}
-          initial="hidden"
+          initial={isInitialMount.current ? "visible" : "hidden"}
           animate="visible"
         />
       </AnimatePresence>

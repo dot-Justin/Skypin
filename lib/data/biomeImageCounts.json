@@ -1,0 +1,37 @@
+{
+  "ocean": {
+    "day": 14,
+    "evening": 12,
+    "night": 13
+  },
+  "lake": {
+    "day": 9,
+    "evening": 11,
+    "night": 17
+  },
+  "beach": {
+    "day": 5,
+    "evening": 6,
+    "night": 3
+  },
+  "desert": {
+    "day": 8,
+    "evening": 7,
+    "night": 10
+  },
+  "field": {
+    "day": 14,
+    "evening": 16,
+    "night": 11
+  },
+  "forest": {
+    "day": 7,
+    "evening": 5,
+    "night": 16
+  },
+  "city": {
+    "day": 5,
+    "evening": 12,
+    "night": 5
+  }
+}
