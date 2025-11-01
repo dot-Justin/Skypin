@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { backgroundCrossfade } from "@/lib/animations";
 
 interface BackgroundManagerProps {
   backgroundImage: string;
@@ -45,9 +46,9 @@ export default function BackgroundManager({ backgroundImage }: BackgroundManager
               backgroundAttachment: "fixed",
               zIndex: -4,
             }}
-            initial={{ opacity: 1, filter: "blur(0px)" }}
-            exit={{ opacity: 0, filter: "blur(20px)" }}
-            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            variants={backgroundCrossfade}
+            initial="visible"
+            exit="exit"
             onAnimationComplete={() => setPreviousImage(null)}
           />
         )}
@@ -61,9 +62,9 @@ export default function BackgroundManager({ backgroundImage }: BackgroundManager
             backgroundAttachment: "fixed",
             zIndex: -3, // Above old image, below gradient
           }}
-          initial={{ opacity: 0, filter: "blur(20px)" }}
-          animate={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          variants={backgroundCrossfade}
+          initial="hidden"
+          animate="visible"
         />
       </AnimatePresence>
 
