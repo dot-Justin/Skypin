@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SearchBar from "@/components/SearchBar";
 import WeatherDisplay from "@/components/WeatherDisplay";
 import BackgroundManager from "@/components/BackgroundManager";
+import StartAudioButton from "@/components/StartAudioButton";
+import AudioControls from "@/components/AudioControls";
+import { useAudio } from "@/components/AudioProvider";
 import { getWeather } from "@/lib/weather";
 import type { WeatherData } from "@/types/weather";
 import { getTimeOfDay, getBiomeImagePath } from "@/lib/biomeUtils";
@@ -14,6 +17,7 @@ export default function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { updateSoundscape, isReady } = useAudio();
 
   // Calculate background image based on biome, time of day, and location coordinates
   // Location coordinates ensure deterministic image selection - same location = same image
@@ -24,7 +28,7 @@ export default function Home() {
         weatherData.biome.coordinates.lat,
         weatherData.biome.coordinates.lon
       )
-    : "/images/field/field-day-1.jpg"; // Default fallback
+    : "/images/backgrounds/field/field-day-1.jpg"; // Default fallback
 
   const handleSearch = async (query: string) => {
     setIsLoading(true);
@@ -41,9 +45,18 @@ export default function Home() {
     }
   };
 
+  // Update soundscape when weather data changes and audio is ready
+  useEffect(() => {
+    if (weatherData && isReady) {
+      updateSoundscape(weatherData);
+    }
+  }, [weatherData, isReady, updateSoundscape]);
+
   return (
     <>
       <BackgroundManager backgroundImage={backgroundImage} />
+      <StartAudioButton />
+      <AudioControls />
 
       <main className="min-h-screen flex flex-col items-center justify-center p-8">
         <div className="w-full max-w-4xl space-y-12">

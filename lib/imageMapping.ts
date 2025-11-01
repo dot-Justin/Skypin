@@ -25,8 +25,8 @@ const normalizedCounts = BIOME_TYPES.reduce<BiomeImageCounts>((acc, biome) => {
  * Image counts for each biome and time-of-day combination.
  * Used to randomly select from available background images.
  *
- * File naming pattern: /images/{biome}/{biome}-{timeOfDay}-{number}.jpg
- * Example: /images/forest/forest-evening-3.jpg
+ * File naming pattern: /images/backgrounds/{biome}/{biome}-{timeOfDay}-{number}.jpg
+ * Example: /images/backgrounds/forest/forest-evening-3.jpg
  */
 export const BIOME_IMAGE_COUNTS = normalizedCounts;
 

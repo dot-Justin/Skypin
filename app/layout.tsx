@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { AudioProvider } from "@/components/AudioProvider";
 import ThemeToggle from "@/components/ThemeToggle";
 import FilmGrain from "@/components/FilmGrain";
 
@@ -105,8 +106,10 @@ export default function RootLayout({
       <body className={`${gambarino.variable} ${articulat.variable} antialiased`} suppressHydrationWarning>
         <FilmGrain />
         <ThemeProvider>
-          <ThemeToggle />
-          {children}
+          <AudioProvider>
+            <ThemeToggle />
+            {children}
+          </AudioProvider>
         </ThemeProvider>
       </body>
     </html>

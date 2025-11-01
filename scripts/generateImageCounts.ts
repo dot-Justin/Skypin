@@ -19,7 +19,7 @@ const TIME_SLOTS: TimeSlot[] = ["day", "evening", "night"];
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const projectRoot = join(__dirname, "..");
-const imagesRoot = join(projectRoot, "public", "images");
+const imagesRoot = join(projectRoot, "public", "images", "backgrounds");
 const outputPath = join(projectRoot, "lib", "data", "biomeImageCounts.json");
 
 async function ensureDirectory(path: string) {

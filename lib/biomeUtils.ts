@@ -125,8 +125,8 @@ function getEffectiveTimeOfDay(
  * @example
  * getAvailableImages("forest", "evening")
  * // Returns: [
- * //   "/images/forest/forest-evening-1.jpg",
- * //   "/images/forest/forest-evening-2.jpg",
+ * //   "/images/backgrounds/forest/forest-evening-1.jpg",
+ * //   "/images/backgrounds/forest/forest-evening-2.jpg",
  * //   ...
  * // ]
  */
@@ -138,7 +138,9 @@ export function getAvailableImages(biome: BiomeType, timeOfDay: TimeOfDay): stri
   const images: string[] = [];
 
   for (let i = 1; i <= count; i++) {
-    images.push(`/images/${effectiveBiome}/${effectiveBiome}-${effectiveTime}-${i}.jpg`);
+    images.push(
+      `/images/backgrounds/${effectiveBiome}/${effectiveBiome}-${effectiveTime}-${i}.jpg`
+    );
   }
 
   return images;
@@ -159,10 +161,10 @@ export function getAvailableImages(biome: BiomeType, timeOfDay: TimeOfDay): stri
  *
  * @example
  * getBiomeImagePath("forest", "evening", 40.7128, -74.0060)
- * // Returns: "/images/forest/forest-evening-3.jpg" (always the same for NYC)
+ * // Returns: "/images/backgrounds/forest/forest-evening-3.jpg" (always the same for NYC)
  *
  * getBiomeImagePath("ocean", "day")
- * // Returns: "/images/beach/beach-day-2.jpg" (fallback to beach)
+ * // Returns: "/images/backgrounds/beach/beach-day-2.jpg" (fallback to beach)
  */
 export function getBiomeImagePath(
   biome: BiomeType, 
